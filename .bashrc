@@ -18,6 +18,10 @@ alias gc='git checkout'
 alias gplo='git pull origin'
 alias gs='git status'
 
+
+alias clone='git clone'
+alias gti='git'
+
 alias rmine=/usr/local/bin/mine
 
 alias macset='code ~/Works/mac-auto-setup/'
