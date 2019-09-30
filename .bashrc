@@ -5,6 +5,9 @@ GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\033[32m\]\u@\[\033[00m\]:\[\033[36m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
 #export PS1='\[\033\e[37;42;1m\]\u\e[37m@:\[\033\e[37;44;1m\]\w\[\e[37;41;1m\]$(__git_ps1)\[\033[00m\]\$ '
 
+
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
 # エイリアス
 alias bashset='source ~/.bash_profile'
 alias macset='code ~/Works/mac-auto-setup/'
@@ -22,14 +25,21 @@ alias rmine=/usr/local/bin/mine
 alias studio=/usr/local/bin/studio
 
 # git
+alias gl='git log'
+alias gld='git log --graph --decorate --oneline'
+alias gd='git diff'
+alias gdc='git diff --color-words'
 alias ga='git add'
 alias gaA='git add -A'
 alias gc='git checkout'
+alias gb='git branch'
 alias gcm='git commit -m'
 alias gp='git push'
-alias gpo='git push origin $(git symbolic-ref --short HEAD)'
+alias gpo='git push origin'
+alias gpoc='git push origin $(git symbolic-ref --short HEAD)'
 alias gc='git checkout'
-alias gplo='git pull origin $(git symbolic-ref --short HEAD)'
+alias gplo='git pull origin'
+alias gploc='git pull origin $(git symbolic-ref --short HEAD)'
 alias gs='git status'
 alias clone='git clone'
 alias gti='git'
@@ -37,3 +47,8 @@ alias gti='git'
 # docker
 alias dc='docker-compose'
 alias d='docker'
+eval "$(direnv hook bash)"
+
+
+# direnv
+eval "$(direnv hook bash)"
